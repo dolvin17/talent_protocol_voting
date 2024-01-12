@@ -9,7 +9,7 @@ int	main(int argc, char **argv)
 	int				total_votes;
 	int				vote_cost;
 
-	vote = 0;
+	vote = atoi(argv[2]);
 	tal = 1;
 	total_spent = 0;
 	total_votes = atoi(argv[1]);
@@ -42,6 +42,6 @@ int	main(int argc, char **argv)
         total_spent += vote_cost + tax;
         vote++;
     	}
-   	printf("Are necesary %d $TAL to emmit %d votes\n", total_votes, total_spent);
+   	printf("Are necesary %d $TAL to emmit %d votes\n", total_spent, total_votes);
     	return (0);
 }
